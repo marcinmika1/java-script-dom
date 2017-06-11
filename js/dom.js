@@ -96,33 +96,47 @@ secondLink.onclick = alarm; /*ustawienie funkcji alarm uruchamianej po kliknieci
 
 
 
-var thirdLink= document.getElementsByTagName('a')[2];
-console.log(thirdLink);
+//var thirdLink= document.getElementsByTagName('a')[2];
+//console.log(thirdLink);
+//
+//thirdLink.addEventListener('click', alarm);
+//
+//
+//function resize(e){  
+//    console.log(e.type);  
+//    
+//    if(e.type == 'mouseover') {  /*sprawdz typ zdarzenia */
+//        mainHeader.style.fontSize = "40px";  /*jesli e.type = mouseover to powieksz fontsize */
+//    }
+//    else {
+//        mainHeader.style.fontSize = "inherit"; /* jesli e.type rozny od mouseover to pomniejsz*/
+//    }
+//    
+//}
+//
+//mainHeader.onmouseover = resize; /*po najechaniu myszka na mainHeader wywolaj funkcji resize*/
+//
+//mainHeader.onmouseout = resize; /*po zjechaniu myszka z mainHeader wywolaj funkcjie resize*/
 
-thirdLink.addEventListener('click', alarm);
+//***************************************************
+/*zdarzenia events */
 
+//console.log(document.header[0]);
 
-function resize(e){  
-    console.log(e.type);  
-    
-    if(e.type == 'mouseover') {
-        mainHeader.style.fontSize = "40px";
-    }
-    else {
-        mainHeader.style.fontSize = "inherit";
-    }
-    
+function klikHeader() {
+    console.log('kliknales header');
 }
 
-mainHeader.onmouseover = resize; /*po najechaniu myszka na mainHeader wywolaj funkcji resize*/
+document.getElementsByTagName('header')[0].onclick=klikHeader;
 
-mainHeader.onmouseout = resize; /*po zjechaniu myszka z mainHeader wywolaj funkcjie resize*/
+function klikH1(e) {
+    
+    e.stopPropagation();
+    
+    console.log("kliknales h1");
+}
 
-
-
-
-
-
+document.getElementsByTagName('h1')[0].onclick=klikH1;
 
 
 
