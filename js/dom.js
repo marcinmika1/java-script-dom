@@ -12,6 +12,7 @@
 
 //***************************************************************
 /*tworzenie zmeinnych na elementach obiektow html*/
+
 //var parFirst = document.getElementById('parFirst');
 //console.log(parFirst);
 //
@@ -39,4 +40,34 @@ console.log(pierwszyDiv.nextSibling.nextSibling.nextSibling);
 
 //***************************************************************
 /*tworzenie dodawanie i usuwanie węzłów */
+
+console.log(document.getElementById('parFirst').children);
+
+var istniejacyWezel = document.getElementById('parFirst').children[3];
+
+console.log(istniejacyWezel);
+
+var newElement = document.createElement('p'); /*stworzenie nowego elementu paragrafu */
+
+var newElementContent = document.createTextNode('to jest nowy element');  /*tworzenie nowego elementu typu text i jego wartość czyli jego tekst*/
+
+newElement.appendChild(newElementContent); /*dodatnie tekstu do paragrafu */
+
+istniejacyWezel.appendChild(newElement);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
