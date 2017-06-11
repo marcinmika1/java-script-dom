@@ -83,14 +83,40 @@ mainHeader.style.color='red'; /* zmieniamy styl i w nim kolor */
 
 /*events  zdarzenia  */
 
+var secondLink= document.getElementsByTagName('a')[1]; /*nadanie zmiennej i przypisanie do niego wartosci z html*/
+console.log(secondLink);
+
+function alarm(e) { 
+    e.preventDefault(); /* zablokowanie defaultowych ustawien */
+    console.log('nie masz 18 lat');
+    console.log(e); /*wyswietl co sie dzieje w funkcji e*/
+}
+
+secondLink.onclick = alarm; /*ustawienie funkcji alarm uruchamianej po kliknieciu*/
 
 
 
+var thirdLink= document.getElementsByTagName('a')[2];
+console.log(thirdLink);
+
+thirdLink.addEventListener('click', alarm);
 
 
+function resize(e){  
+    console.log(e.type);  
+    
+    if(e.type == 'mouseover') {
+        mainHeader.style.fontSize = "40px";
+    }
+    else {
+        mainHeader.style.fontSize = "inherit";
+    }
+    
+}
 
+mainHeader.onmouseover = resize; /*po najechaniu myszka na mainHeader wywolaj funkcji resize*/
 
-
+mainHeader.onmouseout = resize; /*po zjechaniu myszka z mainHeader wywolaj funkcjie resize*/
 
 
 
