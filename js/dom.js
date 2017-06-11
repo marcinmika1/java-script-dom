@@ -51,9 +51,11 @@ var newElement = document.createElement('p'); /*stworzenie nowego elementu parag
 
 var newElementContent = document.createTextNode('to jest nowy element');  /*tworzenie nowego elementu typu text i jego wartość czyli jego tekst*/
 
-newElement.appendChild(newElementContent); /*dodatnie tekstu do paragrafu */
+newElement.appendChild(newElementContent); /*dodatnie tekstu do paragrafu bez tego by sie nei wstawil */
 
-istniejacyWezel.appendChild(newElement);
+istniejacyWezel.appendChild(newElement); /* dodanie paragrafu 'newElement' do diva bez tego by nie wstawil się do diva*/
+
+istniejacyWezel.removeChild(newElement); /*usuniecie paragrafu 'newElement' z diva */
 
 
 
