@@ -57,6 +57,33 @@ istniejacyWezel.appendChild(newElement); /* dodanie paragrafu 'newElement' do di
 
 istniejacyWezel.removeChild(newElement); /*usuniecie paragrafu 'newElement' z diva */
 
+//*************************************************************
+
+/*ATRYBUTY TO : np id class name href ....*/
+
+/*manipulacja wezłami edycja */
+
+
+var mainHeader = document.getElementById('main-header'); /*tworzymy zeminna i pobieramy wezel main-header*/
+console.log(mainHeader);
+
+mainHeader.innerHTML='zmieniam tekst'; /* zmieniamy w nim tekst*/
+
+
+var linki = document.getElementsByClassName('link')[0]; /*tworzymy zmienna i przypisujemy do wezla link [0]*/
+console.log(linki);
+
+linki.href='http://akademia108.pl'; /*zmieniamy wartosc href w linku */
+
+linki.className='nowa-klasa'; /*zmieniamy nazwe klasy*/
+
+mainHeader.style.color='red'; /* zmieniamy styl i w nim kolor */
+
+//***********************************************************
+
+/*events  zdarzenia  */
+
+
 
 
 
