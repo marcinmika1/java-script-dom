@@ -12,17 +12,31 @@
 
 //***************************************************************
 /*tworzenie zmeinnych na elementach obiektow html*/
-var parFirst = document.getElementById('parFirst');
-console.log(parFirst);
+//var parFirst = document.getElementById('parFirst');
+//console.log(parFirst);
+//
+//var link = document.getElementsByClassName('superlink');
+//console.log(link);
+//
+//var linkPoTagu = document.getElementsByTagName('a');
+//console.log(linkPoTagu);
+//
+//var divPoID = document.getElementById('parSecond');
+//console.log(divPoID);
+////***************************************************************
+///*NODES węzły*/
+//
+var pierwszyDiv = document.getElementById('parFirst');
+//console.log(pierwszyDiv);
+//console.log(pierwszyDiv.childNodes); /* wyswietla wszystko co jest np komentarze pusty tekst*/
+//console.log(pierwszyDiv.children); /*wyswietla same obiekty html*/
 
-var link = document.getElementsByClassName('superlink');
-console.log(link);
+//console.log(pierwszyDiv.firstChild);
+//
+//console.log(pierwszyDiv.lastChild);
 
-var linkPoTagu = document.getElementsByTagName('a');
-console.log(linkPoTagu);
+console.log(pierwszyDiv.nextSibling.nextSibling.nextSibling);
 
-var divPoID = document.getElementById('parSecond');
-console.log(divPoID);
 //***************************************************************
-/*NODES węzły*/
+/*tworzenie dodawanie i usuwanie węzłów */
 
